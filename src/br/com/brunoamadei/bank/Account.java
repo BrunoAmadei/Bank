@@ -7,6 +7,8 @@ public class Account {
 
     private static final int MAX_LENGTH = 12;
 
+    private double balance;
+
     public Account(String ag, String cc, String name) {
         this.ag = ag;
         this.cc = cc;
@@ -20,5 +22,15 @@ public class Account {
             this.name = name;
         }
         System.out.println(this.name);
+    }
+
+    public boolean withDraw(double value) {
+        if (balance < value) {
+            return false;
+        } else {
+            balance -= value;
+            System.out.println("valor a sacar: " + value + " Total na conta: " + balance);
+            return true;
+        }
     }
 }
