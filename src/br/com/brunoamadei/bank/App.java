@@ -8,10 +8,26 @@ public class App {
 
         // sacar valores (não pode sacar mais do que tem)
         boolean success = account.withDraw(200.00);
-        if(!success){
-            System.out.println("Não há saldo suficiente para sacar");
-        }
+        // if (!success) {
+        // System.out.println("Não há saldo suficiente para sacar");
+        // }
         // depositar
+        account.deposit(150);
+        account.deposit(50);
+        account.deposit(100);
+
+        if (!account.withDraw(150.00)) {
+            System.out.println("Não há saldo suficiente para sacar");
+        } else {
+            System.out.println("saque efetuado");
+        }
+
+        if (!account.withDraw(200.00)) {
+            System.out.println("Não há saldo suficiente para sacar");
+        } else {
+            System.out.println("saque efetuado");
+        }
+
         // informar operações para usuario
     }
 }

@@ -24,12 +24,15 @@ public class Account {
         System.out.println(this.name);
     }
 
+    public void deposit(double value) {
+        balance += value;
+    }
+
     public boolean withDraw(double value) {
         if (balance < value) {
             return false;
         } else {
             balance -= value;
-            System.out.println("valor a sacar: " + value + " Total na conta: " + balance);
             return true;
         }
     }
