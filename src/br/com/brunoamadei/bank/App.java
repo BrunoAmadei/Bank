@@ -23,7 +23,10 @@ public class App {
             } else if (op.equals("E")) {
                 System.out.println("Saindo do sistema...");
                 break;
+            }else{
+                System.out.println("Comando Inválido, tente novamente!");
             }
         }
+        scanner.close();
     }
 }
