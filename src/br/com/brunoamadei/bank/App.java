@@ -20,6 +20,7 @@ public class App {
 
                 operateAccount(account);
             } else if (op.equals("E")) {
+                System.out.println("Fechando Sistema...");
                 break;
             } else {
                 System.out.println("Comando Inválido, tente novamente!");
@@ -48,7 +49,7 @@ public class App {
                 double value = scanner.nextDouble();
                 account.withDraw(value);
             } else if (op.equals("E")) {
-                System.out.println("Saindo do sistema...");
+                System.out.println("Saindo da conta...");
                 break;
             } else {
                 System.out.println("Comando Inválido, tente novamente!");
