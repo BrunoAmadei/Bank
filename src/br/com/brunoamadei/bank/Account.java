@@ -40,13 +40,13 @@ public class Account {
             return false;
         } else {
             balance -= value;
-            logger.out("Saque realizado de R$" + value + " | Saldo atual: R$" + balance);
+            logger.out("Saque realizado de R$" + value + " | Saldo atual: R$" + String.format("%.2f", balance));
             return true;
         }
     }
     
     // retornando info da conta
     public String toString() {
-        return "A conta " +this.name + "| Agência = " + this.ag + "| Conta = " + this.cc + "| Possui R$" + balance;
+        return "A conta " +this.name + "| Agência = " + this.ag + "| Conta = " + this.cc + "| Possui: R$" + String.format("%.2f", balance);
     }
 }
